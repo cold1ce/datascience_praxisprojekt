@@ -8,8 +8,8 @@ import abbPascalClusteringData as apcd
 apcd.abbPascalClusteringData()
 
 # Sorgt für die Farb Spiele :)
-ax = plt.subplot()
-ax.set_prop_cycle('color',plt.cm.Spectral(np.linspace(0,1,17)))
+plt.subplot().set_prop_cycle('color',plt.cm.Spectral(np.linspace(0,1,17)))
+
 
 # labels 
 plt.xlabel('Time')
@@ -38,7 +38,8 @@ plt.gcf().autofmt_xdate()
 myFmt = mdates.DateFormatter('%Y-%m-%d %H:%M:%S')
 plt.gca().xaxis
 
+# Baut das Label auf
 plt.legend(loc='best')
-
+ 
 plt.show()
 plt.close()
